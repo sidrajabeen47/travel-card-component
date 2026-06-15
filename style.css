@@ -1,0 +1,103 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- THE CARD CONTAINER (Box Model & Display) --- */
+.card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 380px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden; /* Ensures image corners match card radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- IMAGE STYLES --- */
+.card-image-container {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    padding: 16px 16px 0 16px; /* Inner padding to give the border framing effect */
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px; /* Smooth rounded corners for the inner image */
+}
+
+/* --- CONTENT BLOCK --- */
+.card-content {
+    padding: 20px 24px 24px 24px; /* Clockwise padding layout */
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Generates spacing between blocks without messy margins */
+}
+
+/* --- TAGS (Flexbox) --- */
+.card-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 0.85rem;
+    color: #8a94a6;
+    border: 1px solid #e2e8f0;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* --- TYPOGRAPHY --- */
+.card-title {
+    font-size: 1.8rem;
+    color: #1e293b;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-top: -4px; /* Slight optical adjustment */
+}
+
+.card-description {
+    font-size: 0.95rem;
+    color: #8a94a6;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* --- BUTTON DISPLAY & BOX MODEL --- */
+.card-btn {
+    align-self: center; /* Centers the button using flex alignment */
+    background-color: #e3f2ff;
+    color: #1a73e8;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 12px 36px;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 8px;
+}
+
+.card-btn:hover {
+    background-color: #d0e7ff;
+}
